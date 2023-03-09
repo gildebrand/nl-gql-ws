@@ -1,0 +1,15 @@
+schema: "src/entities/**/*.graphql"
+verbose: true
+generates:
+  src/generated/graphql.ts:
+    plugins:
+      - typescript
+      - typescript-resolvers
+      - add:
+          content: "import type { Context } from '../context';"
+    config:
+      contextType: Context
+      mapperTypeSuffix: Model
+      mappers:
+        User: "@prisma/client#User"
+        Todo: "@prisma/client#Todo"

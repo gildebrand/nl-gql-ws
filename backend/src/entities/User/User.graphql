@@ -1,0 +1,13 @@
+type Query {
+  getUsers: [User!]!
+  getUser(id: Int!): User!
+}
+
+type User {
+  id: Int!
+  email: String!
+  name: String!
+  avatarUrl: String
+  createdTodos: [Todo!]!
+  assignedTodos: [Todo!]!
+}
