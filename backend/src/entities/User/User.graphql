@@ -1,6 +1,7 @@
 type Query {
   getUsers: [User!]!
   getUser(id: Int!): User!
+  getCurrentUser: User!
 }
 
 type User {

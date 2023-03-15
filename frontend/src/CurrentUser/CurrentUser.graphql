@@ -1,0 +1,8 @@
+query CurrentUser {
+  getCurrentUser {
+    id
+    name
+    email
+    avatarUrl
+  }
+}

@@ -3,8 +3,10 @@ import { startStandaloneServer } from '@apollo/server/standalone';
 import { makeExecutableSchema } from '@graphql-tools/schema';
 import { mergeResolvers, mergeTypeDefs } from '@graphql-tools/merge';
 import { loadFilesSync } from '@graphql-tools/load-files';
-import { TodoDB } from './db/TodoDB';
 import { createContext } from './context';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 const schema = makeExecutableSchema({
   typeDefs: (() => {

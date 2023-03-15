@@ -7,8 +7,8 @@ async function main() {
     where: { email: 'alice@prisma.io' },
     update: {},
     create: {
-      email: 'alice@prisma.io',
-      name: 'Alice',
+      email: 'boid@netlight.com',
+      name: 'Boidy McBoidface',
       avatarUrl: "https://avatars.slack-edge.com/2016-05-27/46299803760_be53d115d38f81fa0a33_102.jpg",
       authoredTodos: {
         create: [

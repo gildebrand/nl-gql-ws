@@ -1,4 +1,4 @@
-import { PrismaClient, User } from '@prisma/client'
+import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient()
 
@@ -13,4 +13,11 @@ export const UserDB = {
       }
     });
   },
+  getUserByEmail(email: string) {
+    return prisma.user.findFirst({
+      where: {
+        email
+      }
+    });
+  }
 } as const;

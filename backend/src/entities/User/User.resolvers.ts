@@ -7,6 +7,15 @@ export const resolvers: Resolvers = {
     },
     getUser(_, {id}, {userDb}) {
       return userDb.getUserById(id);
+    },
+    async getCurrentUser(_, __, {userDb}) {
+      const user = await userDb.getUserByEmail(process.env.CURRENT_USER_EMAIL);
+
+      if (!user) {
+        throw new Error('Current user not found');
+      }
+
+      return user;
     }
   },
   User: {

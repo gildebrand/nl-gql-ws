@@ -3,7 +3,7 @@
 
   - You are about to drop the column `content` on the `Todo` table. All the data in the column will be lost.
   - You are about to drop the column `published` on the `Todo` table. All the data in the column will be lost.
-  - Made the column `name` on table `User` required. This step will fail if there are existing NULL values in that column.
+  - Made the column `name` on table `CurrentUser` required. This step will fail if there are existing NULL values in that column.
   - Added the required column `assigneeId` to the `Todo` table without a default value. This is not possible if the table is not empty.
   - Added the required column `done` to the `Todo` table without a default value. This is not possible if the table is not empty.
 
