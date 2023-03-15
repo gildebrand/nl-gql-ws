@@ -1,0 +1,18 @@
+.todo-item {
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+    align-items: center;
+}
+
+.todo-item__done {
+    border: 1px solid #a8a8a8;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.todo-item__done:hover {
+    border-color: #e58484;
+}

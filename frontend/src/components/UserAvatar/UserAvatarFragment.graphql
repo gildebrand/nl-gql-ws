@@ -1,0 +1,4 @@
+fragment UserAvatarFragment on User {
+  name
+  avatarUrl
+}

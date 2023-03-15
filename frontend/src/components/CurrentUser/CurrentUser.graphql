@@ -1,0 +1,9 @@
+query CurrentUserQuery {
+  getCurrentUser {
+    id
+    name
+    email
+
+    ...UserAvatarFragment
+  }
+}

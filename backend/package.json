@@ -4,12 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon",
-    "codegen": "rm -rf src/generated/* && graphql-codegen",
+    "dev": "nodemon & yarn codegen --watch",
+    "codegen": "graphql-codegen",
     "prisma:fresh": "rm -rf prisma/dev.db && yarn prisma:migrate && yarn prisma:seed",
     "prisma:migrate": "prisma migrate deploy",
     "prisma:seed": "prisma db seed",
-    "postinstall": "yarn prisma:fresh && yarn codegen"
+    "postinstall": "yarn prisma:fresh"
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"

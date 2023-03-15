@@ -1,0 +1,15 @@
+.todo-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.todo-items-list:not(:first-child) {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.todo-items-list:not(:last-child) {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}

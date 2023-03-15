@@ -2,8 +2,10 @@ overwrite: true
 schema: ../backend/**/*.graphql
 documents: src/**/*.graphql
 verbose: true
+config:
+  dedupeOperationSuffix: true
 generates:
-  generated/graphql.ts:
+  src/generated/graphql.ts:
     plugins:
       - typescript
       - typescript-operations

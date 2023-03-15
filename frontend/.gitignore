@@ -11,7 +11,7 @@
 # production
 /build
 
-generated
+/src/generated/
 
 # misc
 .DS_Store
