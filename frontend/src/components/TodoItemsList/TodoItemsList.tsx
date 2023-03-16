@@ -2,7 +2,13 @@ import { useTodoItemsListQuery } from '../../generated/graphql';
 import { TodoItem } from '../TodoItem/TodoItem';
 import "./TodoItemsList.css";
 
-export const TodoItemsList = () => {
+export const TodoItemsList = ({
+  statusFilterValue,
+  ownerFilterValue,
+}: {
+  statusFilterValue: boolean | null;
+  ownerFilterValue: number | null;
+}) => {
   const {data} = useTodoItemsListQuery();
 
   if (!data) {

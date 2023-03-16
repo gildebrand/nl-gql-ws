@@ -15,6 +15,14 @@ async function main() {
           {
             title: "Buy milk",
             done: false
+          },
+          {
+            title: "Write feedback",
+            done: false
+          },
+          {
+            title: "Be awesome",
+            done: true
           }
         ]
       }

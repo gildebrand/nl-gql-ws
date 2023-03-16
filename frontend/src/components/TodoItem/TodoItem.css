@@ -6,13 +6,17 @@
     align-items: center;
 }
 
-.todo-item__done {
+.todo-item__status {
     border: 1px solid #a8a8a8;
     width: 20px;
     height: 20px;
     border-radius: 50%;
+    text-align: center;
+    color: #0c7500;
+    font-size: 30px;
+    line-height: 10px;
 }
 
-.todo-item__done:hover {
+.todo-item__status:hover {
     border-color: #e58484;
 }

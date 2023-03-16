@@ -9,7 +9,7 @@ export const TodoItem = ({
   onUpdate?: (updatedData: TodoItemFragment) => Awaited<unknown>
 }) => {
   return <div className="todo-item card">
-    <div className="todo-item__done"
+    <div className="todo-item__status"
          onClick={() => onUpdate?.({...todo, done: !todo.done})}>{todo.done ? "✓" : ""}</div>
     <span>{todo.title}</span>
   </div>
