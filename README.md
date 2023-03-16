@@ -21,7 +21,7 @@ If you want to get a clean database with seeded data to work with, run `yarn pri
 
 
 ### Frontend
-Run `yarn install` followed by `yarn dev` in the frontend folder. This will install all dependencies, generate type information for our GraphQL queries, and launch the frontend in watch mode on `http://localhost:3000`
+Run `yarn install` followed by `yarn dev` in the frontend folder. This will install all dependencies, generate type information for our GraphQL queries, and launch the frontend in watch mode on `http://localhost:3000`.
 
 When you do changes to _.ts(x)_ files in the frontend it will automatically reload. When you do changes to _.graphql_ files in the frontend type information will automatically be generated.
 
