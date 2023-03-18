@@ -25,7 +25,6 @@
     font-size: 12px;
     text-Transform: uppercase;
     color: #c0c0c0;
-    margin-right: 10px;
 }
 
 .todo-item__delete:hover {
