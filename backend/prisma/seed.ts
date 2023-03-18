@@ -3,8 +3,8 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 async function main() {
-  const alice = await prisma.user.upsert({
-    where: { email: 'alice@prisma.io' },
+  const boid = await prisma.user.upsert({
+    where: { email: 'boid@netlight.com' },
     update: {},
     create: {
       email: 'boid@netlight.com',
@@ -28,15 +28,36 @@ async function main() {
       }
     },
   })
-  const bob = await prisma.user.upsert({
-    where: { email: 'bob@prisma.io' },
+  const horsey = await prisma.user.upsert({
+    where: { email: 'horsey@netlight.com' },
     update: {},
     create: {
-      email: 'bob@prisma.io',
-      name: 'Bob',
+      email: 'horsey@netlight.com',
+      name: 'Horsey',
+      avatarUrl: "https://www.netlight.com/wp-content/uploads/netlighthorse-320x320.jpg",
+      authoredTodos: {
+        create: [
+          {
+            title: "Enjoy some fresh hay and water after a long day of grazing",
+            done: false,
+          },
+          {
+            title: "Take a relaxing nap in the sun to recharge my energy",
+            done: false,
+          },
+          {
+            title: "Practice my trotting and cantering skills",
+            done: false,
+          },
+          {
+            title: "Explore new trails and surroundings to experience the world around me",
+            done: false
+          }
+        ]
+      }
     },
   })
-  console.log({ alice, bob })
+  console.log({ boid, horsey });
 }
 
 
