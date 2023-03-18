@@ -6,25 +6,3 @@
     flex-direction: column;
     gap: 24px;
 }
-
-.navbar {
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar > * {
-    flex: 1;
-}
-
-.navbar__title {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.navbar__user {
-    display: flex;
-    justify-content: flex-end;
-}

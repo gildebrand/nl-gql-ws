@@ -1,0 +1,28 @@
+.create-todo {
+    display: flex;
+}
+
+.create-todo__input {
+    width: auto;
+    flex: 1;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-bottom: -10px;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.create-todo__button {
+    appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    border: none;
+    font-weight: bold;
+    color: #884747;
+    padding: 0;
+}
+
+.create-todo__button:disabled {
+    opacity: 0.5;
+}

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './App.css';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
-import { CurrentUser } from './components/CurrentUser/CurrentUser';
 import { TodoItemsList } from './components/TodoItemsList/TodoItemsList';
 import { TodoFilters } from './components/TodoFilters/TodoFilters';
+import { CreateTodo } from './components/CreateTodo/CreateTodo';
+import { Navbar } from './components/Navbar/Navbar';
 
 const apolloClient = new ApolloClient({
   uri: "http://localhost:5000",
@@ -17,13 +18,7 @@ export const App = () => {
   return (
     <ApolloProvider client={apolloClient}>
       <div className="content">
-        <div className="navbar card">
-          <div className="navbar__pseudo"/>
-          <div className="navbar__title">To Do</div>
-          <div className="navbar__user">
-            <CurrentUser/>
-          </div>
-        </div>
+        <Navbar />
         <TodoFilters
           statusFilterValue={statusFilterValue}
           ownerFilterValue={ownerFilterValue}
@@ -33,6 +28,9 @@ export const App = () => {
         <TodoItemsList
           statusFilterValue={statusFilterValue}
           ownerFilterValue={ownerFilterValue} />
+        <div style={{position: "fixed", left: "10px", bottom: "10px", right: "10px"}}>
+          <CreateTodo onCreate={() => {}} />
+        </div>
       </div>
     </ApolloProvider>
   );
