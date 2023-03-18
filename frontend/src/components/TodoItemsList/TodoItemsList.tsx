@@ -23,10 +23,10 @@ export const TodoItemsList = ({
       key={todo.id}
       todo={todo}
       onUpdate={() => {
-        // TODO: Implement
+        // TODO: Make update work
       }}
       onDelete={() => {
-        // TODO: Implement
+        // TODO: Make deleting work
       }}
     />)}
   </div>

@@ -30,7 +30,9 @@ export const App = () => {
           ownerFilterValue={ownerFilterValue} />
         <div style={{position: "fixed", left: "10px", bottom: "10px", right: "10px"}}>
           <UpsertTodoItem
-            onSubmit={() => {}}
+            onSubmit={() => {
+              // TODO: Make something happen when submitting
+            }}
             placeholder={"Add a new to do..."}
             submitText={"Create"}
           />
