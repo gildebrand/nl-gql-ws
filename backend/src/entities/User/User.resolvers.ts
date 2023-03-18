@@ -8,9 +8,7 @@ export const resolvers: Resolvers = {
     getUser(_, {id}, {userDb}) {
       return userDb.getUserById(id);
     },
-    async getCurrentUser(_, __, {userDb}) {
-      const user = await userDb.getUserByEmail(process.env.CURRENT_USER_EMAIL);
-
+    async getCurrentUser(_, __, {user}) {
       if (!user) {
         throw new Error('Current user not found');
       }

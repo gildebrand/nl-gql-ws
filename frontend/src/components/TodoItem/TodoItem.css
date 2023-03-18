@@ -20,3 +20,14 @@
 .todo-item__status:hover {
     border-color: #e58484;
 }
+
+.todo-item__delete {
+    font-size: 12px;
+    text-Transform: uppercase;
+    color: #c0c0c0;
+    margin-right: 10px;
+}
+
+.todo-item__delete:hover {
+    color: #e58484;
+}

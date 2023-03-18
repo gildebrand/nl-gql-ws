@@ -3,11 +3,11 @@ import './App.css';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import { TodoItemsList } from './components/TodoItemsList/TodoItemsList';
 import { TodoFilters } from './components/TodoFilters/TodoFilters';
-import { CreateTodo } from './components/CreateTodo/CreateTodo';
+import { UpsertTodoItem } from './components/UpsertTodoItem/UpsertTodoItem';
 import { Navbar } from './components/Navbar/Navbar';
 
 const apolloClient = new ApolloClient({
-  uri: "http://localhost:5000",
+  uri: "http://localhost:8000",
   cache: new InMemoryCache()
 });
 
@@ -29,7 +29,11 @@ export const App = () => {
           statusFilterValue={statusFilterValue}
           ownerFilterValue={ownerFilterValue} />
         <div style={{position: "fixed", left: "10px", bottom: "10px", right: "10px"}}>
-          <CreateTodo onCreate={() => {}} />
+          <UpsertTodoItem
+            onSubmit={() => {}}
+            placeholder={"Add a new to do..."}
+            submitText={"Create"}
+          />
         </div>
       </div>
     </ApolloProvider>

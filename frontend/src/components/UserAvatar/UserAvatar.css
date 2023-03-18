@@ -1,6 +1,4 @@
 .user-avatar {
-    width: 36px;
-    height: 36px;
     background: #e58484;
     background-size: cover;
     border-radius: 50%;
@@ -8,4 +6,18 @@
     text-align: center;
     color: #884747;
     box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+}
+
+.user-avatar--36 {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    line-height: 36px;
+}
+
+.user-avatar--24 {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    line-height: 24px;
 }

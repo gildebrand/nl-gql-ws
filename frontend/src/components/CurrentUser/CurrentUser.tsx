@@ -1,9 +1,8 @@
 import { useCurrentUserQuery } from '../../generated/graphql';
-import { UserAvatar } from '../UserAvatar/UserAvatar';
+import { UserAvatar, UserAvatarSize } from '../UserAvatar/UserAvatar';
 
 export const CurrentUser = () => {
   const {data} = useCurrentUserQuery();
-  console.log("data", data);
 
   if (!data) {
     return null;
@@ -16,7 +15,7 @@ export const CurrentUser = () => {
     gap: "8px",
     alignItems: "center",
   }}>
-    <UserAvatar user={user} />
+    <UserAvatar user={user} size={UserAvatarSize.Large}/>
     <div style={{
       display: "flex",
       flexDirection: "column",

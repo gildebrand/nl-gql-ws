@@ -41,7 +41,7 @@ const server = new ApolloServer({
 //  2. installs your ApolloServer instance as middleware
 //  3. prepares your app to handle incoming requests
 startStandaloneServer(server, {
-  listen: {port: 5000},
+  listen: {port: 8000},
   context: async () => createContext(),
 }).then(({url}) => {
   console.log(`🚀 Server ready at: ${url}`);

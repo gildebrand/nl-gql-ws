@@ -1,10 +1,28 @@
 import { UserAvatarFragment } from '../../generated/graphql';
 import "./UserAvatar.css";
 
-export const UserAvatar = ({user}:{user: UserAvatarFragment}) => {
+export enum UserAvatarSize {
+  Small= 24,
+  Large= 36
+}
+
+export const UserAvatar = ({
+  user,
+  size
+}:{
+  user: UserAvatarFragment;
+  size: UserAvatarSize;
+}) => {
+  const className = `user-avatar user-avatar--${size}`;
+
   if (user.avatarUrl) {
-    return <div className="user-avatar" style={{backgroundImage: `url(${user.avatarUrl})`}} />;
+    return <div
+      className={className}
+      style={{backgroundImage: `url(${user.avatarUrl})`}}
+    />;
   }
 
-  return <div className="user-avatar">{user.name.split(" ").map(name => name[0]).join("")}</div>;
+  return <div className={className}>
+    {user.name.split(" ").map(name => name[0]).join("")}
+  </div>;
 }

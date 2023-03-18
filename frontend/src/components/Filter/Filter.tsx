@@ -1,6 +1,6 @@
 import "./Filter.css";
 
-export const Filter = <ValueType,>({
+export const Filter = <ValueType extends string | number | boolean | null,>({
   label,
   items,
   selectedValue,
@@ -16,6 +16,7 @@ export const Filter = <ValueType,>({
     <div className="filter__items">
       {items.map(filterItem =>
         <div
+          key={JSON.stringify(filterItem.value)}
           className={`filter__items__item ${selectedValue === filterItem.value ? 'filter__items__item--selected' : ''}`}
           onClick={() => onChange(filterItem.value)}>
           {filterItem.label}
