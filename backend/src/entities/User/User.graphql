@@ -7,4 +7,7 @@ type Query {
 type User {
   id: Int!
   name: String!
+  email: String!
+  avatarUrl: String
+  todos: [Todo!]!
 }

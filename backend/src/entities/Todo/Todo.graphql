@@ -4,4 +4,7 @@ type Query {
 
 type Todo {
   id: Int!
+  done: Boolean!
+  title: String!
+  author: User!
 }
