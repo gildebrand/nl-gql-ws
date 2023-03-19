@@ -1,5 +1,10 @@
 type Query {
-  getTodos: [Todo!]!
+  getTodos(filter: GetTodosFilter! = {}): [Todo!]!
+}
+
+input GetTodosFilter {
+  done: Boolean
+  authorId: Int
 }
 
 type Todo {
