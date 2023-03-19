@@ -1,4 +1,9 @@
-import { useTodoItemsListQuery } from '../../generated/graphql';
+import {
+  useTodoItemsListQuery,
+  useDeleteTodoItemMutation,
+  TodoItemsListQueryDocument,
+  useUpdateTodoItemMutation
+} from '../../generated/graphql';
 import { TodoItem } from '../TodoItem/TodoItem';
 import "./TodoItemsList.css";
 
@@ -17,6 +22,8 @@ export const TodoItemsList = ({
       }
     }
   });
+  const [deleteTodoItem] = useDeleteTodoItemMutation();
+  const [updateTodoItem] = useUpdateTodoItemMutation();
 
   if (!data) {
     return null;
@@ -28,12 +35,21 @@ export const TodoItemsList = ({
     {todos.map(todo => <TodoItem
       key={todo.id}
       todo={todo}
-      onUpdate={({title, done}) => {
-        // TODO: Make update work (if we have time over)
-      }}
-      onDelete={() => {
-        // TODO: Make deleting work
-      }}
+      onUpdate={({title, done}) => updateTodoItem({
+        variables: {
+          todoId: todo.id,
+          update: {
+            title,
+            done
+          }
+        }
+      })}
+      onDelete={() => deleteTodoItem({
+        variables: {
+          todoId: todo.id
+        },
+        refetchQueries: [TodoItemsListQueryDocument]
+      })}
     />)}
   </div>
 }

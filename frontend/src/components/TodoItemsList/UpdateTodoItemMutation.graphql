@@ -1,0 +1,7 @@
+mutation UpdateTodoItemMutation($todoId: Int!, $update: UpdateTodoInput!) {
+  updateTodo(todoId: $todoId, update: $update) {
+    id
+    title
+    done
+  }
+}
