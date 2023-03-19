@@ -2,6 +2,17 @@ type Query {
   getTodos(filter: GetTodosFilter! = {}): [Todo!]!
 }
 
+type Mutation {
+  deleteTodo(todoId: Int!): Boolean!
+  createTodo(title: String!): Todo!
+  updateTodo(todoId: Int!, update: UpdateTodoInput!): Todo!
+}
+
+input UpdateTodoInput {
+  title: String!
+  done: Boolean!
+}
+
 input GetTodosFilter {
   done: Boolean
   authorId: Int
