@@ -17,7 +17,7 @@ export const TodoDB = {
       }
     });
   },
-  createTodo(data: Prisma.TodoCreateInput) {
+  createTodo(data: Prisma.TodoUncheckedCreateInput) {
     return prisma.todo.create({data});
   },
   updateTodo(id: number, data: Prisma.TodoUpdateInput) {
