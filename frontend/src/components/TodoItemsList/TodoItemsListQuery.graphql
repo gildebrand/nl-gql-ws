@@ -1,5 +1,5 @@
-query TodoItemsListQuery {
-  getTodos {
+query TodoItemsListQuery($filter: GetTodosFilter!) {
+  getTodos(filter: $filter) {
     id
     ...TodoItemFragment
   }

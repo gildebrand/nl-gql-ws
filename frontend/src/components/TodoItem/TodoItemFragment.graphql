@@ -2,4 +2,8 @@ fragment TodoItemFragment on Todo {
   id
   title
   done
+
+  author {
+    ...UserAvatarFragment
+  }
 }

@@ -2,6 +2,7 @@ import { TodoItemFragment } from '../../generated/graphql';
 import "./TodoItem.css";
 import { useState } from 'react';
 import { UpsertTodoItem } from '../UpsertTodoItem/UpsertTodoItem';
+import { UserAvatar, UserAvatarSize } from '../UserAvatar/UserAvatar';
 
 export const TodoItem = ({
   todo,
@@ -52,13 +53,10 @@ export const TodoItem = ({
             event.stopPropagation();
             onDelete();
           }}>Delete️</span>}
-      {/*
-        TODO: Add avatars to the TodoItem
-        <UserAvatar
-          user={todo.author}
-          size={UserAvatarSize.Small}
-        />
-      */}
+      <UserAvatar
+        user={todo.author}
+        size={UserAvatarSize.Small}
+      />
     </div>
   );
 }

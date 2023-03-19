@@ -9,8 +9,14 @@ export const TodoItemsList = ({
   statusFilterValue: boolean | null;
   ownerFilterValue: number | null;
 }) => {
-  // TODO: make use of filters in query
-  const {data} = useTodoItemsListQuery();
+  const {data} = useTodoItemsListQuery({
+    variables: {
+      filter: {
+        done: statusFilterValue,
+        authorId: ownerFilterValue
+      }
+    }
+  });
 
   if (!data) {
     return null;
