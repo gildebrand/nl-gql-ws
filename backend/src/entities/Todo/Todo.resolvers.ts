@@ -5,10 +5,5 @@ export const resolvers: Resolvers =  {
     getTodos(_, __, {todoDb}) {
       return todoDb.getTodos();
     }
-  },
-  Todo: {
-    user(todo, __, {userDb}) {
-      return userDb.getUserById(todo.authorId);
-    }
   }
 }

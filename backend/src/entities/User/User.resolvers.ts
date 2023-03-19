@@ -15,10 +15,5 @@ export const resolvers: Resolvers = {
 
       return user;
     }
-  },
-  User: {
-    createdTodos(user, _, {todoDb}) {
-      return todoDb.getTodos({authorId: user.id});
-    }
   }
 }

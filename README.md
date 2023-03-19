@@ -9,11 +9,11 @@ The project is organized as a monorepo with a backend and a frontend. The backen
 A prerequisite to getting up and running is that you have Yarn and Node installed on your computer. 
 
 ### Backend
-Run `yarn install` followed by `yarn dev` in the `backend` folder. This will install all dependencies, create a local SQLite database, seed the database with some data, generate type information for our GraphQL schemas, and launch the backend in watch mode on `http://localhost:5000`.
+Run `yarn install` followed by `yarn dev` in the `backend` folder. This will install all dependencies, create a local SQLite database, seed the database with some data, generate type information for our GraphQL schemas, and launch the backend in watch mode on `http://localhost:8000`.
 
 When you do changes to _.ts_ files in the backend it will automatically reload within a couple of seconds. When you do changes to _.graphql_ files in the backend type information will automatically be generated and the backend will reload.
 
-When the backend is up and running you should be able to open the GraphQL Playground on `http://localhost:5000`.
+When the backend is up and running you should be able to open the GraphQL Playground on `http://localhost:8000`.
 
 ![GraphQL Playground](graphql-playground.png)
 

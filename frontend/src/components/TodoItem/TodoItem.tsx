@@ -39,7 +39,10 @@ export const TodoItem = ({
         }
       }}>
       <div className="todo-item__status"
-           onClick={() => onUpdate?.({...todo, done: !todo.done})}>
+           onClick={(event) => {
+             event.stopPropagation();
+             onUpdate?.({...todo, done: !todo.done});
+           }}>
         {todo.done ? "✓" : ""}
       </div>
       <span style={{flex: 1}}>{todo.title}</span>
