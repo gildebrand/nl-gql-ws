@@ -55,7 +55,7 @@ export const TodoItem = ({
       {/*
         TODO: Add avatars to the TodoItem
         <UserAvatar
-          user={todo.user}
+          user={todo.author}
           size={UserAvatarSize.Small}
         />
       */}

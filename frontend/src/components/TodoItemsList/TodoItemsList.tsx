@@ -22,8 +22,8 @@ export const TodoItemsList = ({
     {todos.map(todo => <TodoItem
       key={todo.id}
       todo={todo}
-      onUpdate={() => {
-        // TODO: Make update work
+      onUpdate={({title, done}) => {
+        // TODO: Make update work (if we have time over)
       }}
       onDelete={() => {
         // TODO: Make deleting work
