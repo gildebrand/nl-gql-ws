@@ -8,6 +8,13 @@ The project is organized as a monorepo with a backend and a frontend. The backen
 
 A prerequisite to getting up and running is that you have Yarn and Node installed on your computer. 
 
+### TLDR
+1. Open up two terminals
+2. In the first one, navigate to `backend` and run `yarn && yarn dev`
+3. In the second one, navigate to `frontend` and run `yarn && yarn dev` (will however fail before we're done with the backend)
+4. Open up `https://localhost:8000` for the backend
+5. Open up `https://localhost:3000` for the frontend
+
 ### Backend
 Run `yarn install` followed by `yarn dev` in the `backend` folder. This will install all dependencies, create a local SQLite database, seed the database with some data, generate type information for our GraphQL schemas, and launch the backend in watch mode on `http://localhost:8000`.
 
