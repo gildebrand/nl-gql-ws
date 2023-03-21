@@ -4,6 +4,8 @@ Below you should find the relevant information necessary to get up and running w
 
 The project is organized as a monorepo with a backend and a frontend. The backend is based on Node, Apollo Server, Codegen and Prisma (the latter is configured and ready to go). The frontend is based on React, Apollo Client and Codegen.
 
+The entire presentation can be found at https://netlight365beta-my.sharepoint.com/:p:/g/personal/jany_netlight_com/ETZ7mNm5uCtMmfWB2utMRyEBuWcqpl_zQGFTNG11sscwcA?e=sh0XVs
+
 ## Getting started
 
 A prerequisite to getting up and running is that you have Yarn and Node installed on your computer. 
